@@ -46,3 +46,6 @@
     color: white
 }
 
+.paragraphSupport{
+    white-space: pre-wrap;
+}

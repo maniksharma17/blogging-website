@@ -64,14 +64,14 @@ function ContentPage({setBlogContent, blogContent}: {setBlogContent: any, blogCo
 
 
     return <div className="fixed mt-28 flex flex-col md:ml-10 mx-3 md:w-[90%] w-[95%] h-auto gap-5">
-        <textarea placeholder="Title" className="headingFont  whitespace-pre-wrap border text-wrap placeholder:text-6xl h-20 overflow-visible text-3xl outline-none"
+        <textarea placeholder="Title" className="headingFont paragraphSupport border text-wrap placeholder:text-6xl h-20 overflow-visible text-3xl outline-none"
         onChange={(e)=>{
             setBlogContent({
                 ...blogContent,
                 title: e.target.value
             })
         }}></textarea>
-        <textarea placeholder="Type here" className="placeholder:text-xl  whitespace-pre-wrap md:pr-40 pr-10 border placeholder:font-light text-md text-justify h-screen outline-none"
+        <textarea placeholder="Type here" className="placeholder:text-xl paragraphSupport md:pr-40 pr-10 border placeholder:font-light text-md text-justify h-screen outline-none"
         onChange={(e)=>{
             setBlogContent({
                 ...blogContent,
