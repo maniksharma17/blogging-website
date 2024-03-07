@@ -1,0 +1,48 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.headingFont{
+    font-family: "Libre Baskerville";
+}
+
+.authLogoBg{
+    clip-path: ellipse(40% 25% at 50% 35%);
+}
+
+.gradientBg{
+    background: radial-gradient(farthest-corner at 10px 10px, rgb(209, 209, 237), white);
+}
+
+.sidebarButton{
+    font-size: 20px;
+    color: black;
+    border-bottom: 3px solid black;
+    text-align: center;
+}
+
+.sidebarButton:hover{
+    background-color: black;
+    color: white;
+}
+
+.sidebarButton:nth-child(3){
+    border-color: rgb(50, 150, 50);
+}
+.sidebarButton:nth-child(3):hover{
+    background-color: rgb(51, 140, 51);
+}
+
+.sidebarButton:nth-child(4){
+    border-color: rgb(197, 58, 58)
+}
+.sidebarButton:nth-child(4):hover{
+    background-color: rgb(180, 58, 58);
+    color: white
+}
+
