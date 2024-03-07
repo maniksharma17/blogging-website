@@ -26,7 +26,7 @@ export function Profile(){
             setLoading(false)
         })
         
-    }, [])
+    }, [profile])
 
     if (loading){
         return <div>
@@ -101,18 +101,14 @@ export function Profile(){
 
         navigate('/read') 
     }}>
-        <div className="h-6 w-6 p-5 absolute top-5 right-5 cursor-pointer"
+        <div className="h-6 w-6 rounded-full block bg-red-300 absolute top-2 right-2 cursor-pointer"
             onClick={async ()=>{
                 await axios.delete(`${BACKEND_URL}/api/v1/blog/${blogId}`, {
                     headers: {
                         'Authorization': 'Bearer ' + localStorage.getItem('token'),
                         'Content-Type': 'json/application'
                     }
-                })
-
-                window.location.reload()
-                navigate('/profile')
-                
+                })                
             }}
         ><span className="material-symbols-outlined">delete</span></div>
         <p className="md:text-lg text-md font-semibold w-10/12">{title}</p>

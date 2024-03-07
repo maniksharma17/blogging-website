@@ -19,8 +19,8 @@ export default function BlogPage(){
             </div>
             <div className="text-xl mt-20 font-light">{author}</div>
         </div>
-        <div className="text-4xl headingFont my-5">{title}</div>
-        <div className="font-light text-justify w-[98%] overflow-hidden text-wrap">{content}</div>
+        <p className="text-4xl headingFont my-5 whitespace-pre-wrap">{title}</p>
+        <p className="font-light text-justify w-[95%] whitespace-pre-wrap text-wrap overflow-hidden">{content}</p>
     </div>
 </>
 }
