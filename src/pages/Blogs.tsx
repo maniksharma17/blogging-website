@@ -26,7 +26,7 @@ export default function BlogsDashboard(){
             setBlogs(blogs.reverse())
             setLoading(false)
         })
-    }, [filter])
+    }, [filter, blogs])
 
     if (loading){
         return <div>
