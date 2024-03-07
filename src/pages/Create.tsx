@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { BACKEND_URL } from "../../config"
 import axios from 'axios'
 import { createPostSchema } from "@maniksharma17/common"
@@ -15,6 +15,8 @@ export function CreatePage(){
 }
 
 function NavBar({blogContent}: {blogContent: blogContentType}){
+    const navigate = useNavigate()
+
     return <div className="bg-white border-b block fixed w-full md:px-10 px-3 py-3">
 
         <div className="flex flex-row items-center justify-between">
@@ -22,7 +24,7 @@ function NavBar({blogContent}: {blogContent: blogContentType}){
             <p className="text-black headingFont text-2xl md:text-4xl">Medium</p>
             
 
-            <Link to={'/blogs'}><button className="bg-blue rounded-full bg-blue-700 text-white p-1 md:p-2 px-3"
+            <button className="bg-blue rounded-full bg-blue-700 text-white p-1 md:p-2 px-3"
                     
                     onClick={()=>{
                         axios.post(`${BACKEND_URL}/api/v1/blog/post`, blogContent, {
@@ -32,9 +34,10 @@ function NavBar({blogContent}: {blogContent: blogContentType}){
                             }
                         })
 
+                        navigate('/blogs')
                         
                     }}
-            >Publish</button></Link>
+            >Publish</button>
 
             <div className="md:flex hidden flex-row gap-5 items-center justify-center">
                 <Link to={'/profile'}><button className="sidebarButton">Profile</button></Link>
