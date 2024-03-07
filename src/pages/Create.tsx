@@ -75,7 +75,7 @@ function ContentPage({setBlogContent, blogContent}: {setBlogContent: any, blogCo
                 title: e.target.value
             })
         }}></textarea>
-        <textarea placeholder="Type here" className="placeholder:text-xl paragraphSupport md:pr-40 pr-10 border placeholder:font-light text-md text-justify h-screen outline-none"
+        <textarea placeholder="Type here" className="placeholder:text-xl paragraphSupport md:pr-40 pr-10 border placeholder:font-light text-md text-justify overflow-scroll outline-none"
         onChange={(e)=>{
             setBlogContent({
                 ...blogContent,
