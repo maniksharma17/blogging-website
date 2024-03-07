@@ -26,8 +26,8 @@ function NavBar({blogContent}: {blogContent: blogContentType}){
 
             <button className="bg-blue rounded-full bg-blue-700 text-white p-1 md:p-2 px-3"
                     
-                    onClick={()=>{
-                        axios.post(`${BACKEND_URL}/api/v1/blog/post`, blogContent, {
+                    onClick={async ()=>{
+                        await axios.post(`${BACKEND_URL}/api/v1/blog/post`, blogContent, {
                             headers: {
                                 'Authorization': "Bearer " + localStorage.getItem('token'),
                                 'Content-Type': 'application/json'
@@ -36,6 +36,10 @@ function NavBar({blogContent}: {blogContent: blogContentType}){
 
                         navigate('/blogs')
                         
+                    }}
+
+                    onClickCapture={(e: any)=>{
+                        e.target.style.opacity = 0.5;
                     }}
             >Publish</button>
 
