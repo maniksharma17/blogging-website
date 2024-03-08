@@ -11,16 +11,16 @@ export default function BlogPage(){
 
     return <>
         <NavBar></NavBar>
-        <Link to={'/blogs'}><div className="absolute top-20 cursor-pointer right-2 text-2xl font-thin  text-red-500 border rounded-full inline-flex items-center justify-center w-9 h-9 overflow-hidden">X</div></Link>
+        <Link to={'/blogs'}><div className="absolute top-20 mr-5 cursor-pointer right-2 text-2xl font-thin  text-black border-1 border-black border rounded-full inline-flex items-center justify-center w-9 h-9 overflow-hidden">X</div></Link>
         <div className="m-5 mt-0">
-        <div className="flex flex-row gap-3 items-center">
+        <div className="flex flex-row gap-3 items-center md:px-20">
             <div className="bg-black mt-20 inline-flex relative p-3 w-8 h-8 items-center justify-center rounded-full">
                 <span className="text-white">{author[0]}</span>
             </div>
             <div className="text-xl mt-20 font-light">{author}</div>
         </div>
-        <p className="text-4xl headingFont my-5 whitespace-pre-wrap">{title}</p>
-        <p className="font-light text-justify w-[95%] whitespace-pre-wrap text-wrap overflow-hidden">{content}</p>
+        <p className="text-4xl headingFont my-5 whitespace-pre-wrap md:px-20">{title}</p>
+        <p className="text-justify w-[95%] whitespace-pre-wrap text-wrap overflow-hidden md:px-20">{content}</p>
     </div>
 </>
 }

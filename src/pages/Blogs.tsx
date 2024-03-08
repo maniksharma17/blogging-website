@@ -94,7 +94,7 @@ export function BlogCard({title, desc, author, blogId}: {title: string, desc: st
         navigate('/read') 
     }}>
         <div className="flex flex-row items-center gap-2 w-fit">
-            <div className="bg-gray-500 relative inline-flex items-center justify-center overflow-hidden rounded-full w-6 h-6">
+            <div className="bg-black relative inline-flex items-center justify-center overflow-hidden rounded-full w-6 h-6">
                 <span className="text-white text-sm font-light">{author[0].toLocaleUpperCase()}</span>
             </div>
             <p className="text-lg font-light">{author[0].toLocaleUpperCase() + author.slice(1)}</p>

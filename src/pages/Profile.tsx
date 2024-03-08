@@ -101,7 +101,12 @@ export function Profile(){
 
         navigate('/read') 
     }}>
-        <div className="h-6 w-6 rounded-full block bg-red-300 absolute top-2 right-2 cursor-pointer"
+        
+        <p className="md:text-lg text-md font-semibold w-10/12">{title}</p>
+        <p className="font-light text-sm italic w-10/12 overflow-hidden text-wrap">{desc.slice(0, 150)}...</p>
+        <p className="text-slate-500 mt-2">{`(${calcMinutes(desc)} minutes)`}</p>
+
+        <button className="w-10 h-8 align-middle mt-5 relative border float-right border-red-800 block cursor-pointer"
             onClick={async ()=>{
                 await axios.delete(`${BACKEND_URL}/api/v1/blog/${blogId}`, {
                     headers: {
@@ -110,10 +115,7 @@ export function Profile(){
                     }
                 })                
             }}
-        ><span className="material-symbols-outlined">delete</span></div>
-        <p className="md:text-lg text-md font-semibold w-10/12">{title}</p>
-        <p className="font-light text-sm italic w-10/12 overflow-hidden text-wrap">{desc.slice(0, 150)}...</p>
-        <p className="text-slate-500 mt-2">{`(${calcMinutes(desc)} minutes)`}</p>
+        ><span className="material-symbols-outlined absolute top-1 left-1.5 text-red-800">delete</span></button>
         
     </div>
 }
